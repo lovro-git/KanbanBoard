@@ -1,0 +1,148 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition-fast);
+}
+
+.main:hover {
+  border-color: var(--color-text-secondary);
+}
+
+.main:hover .actions {
+  opacity: 1;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: transparent;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.checkbox svg {
+  width: 12px;
+  height: 12px;
+  color: white;
+}
+
+.checkbox:hover {
+  border-color: var(--color-accent);
+}
+
+.checkbox.checked {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.title {
+  flex: 1;
+  font-size: 0.875rem;
+  color: var(--color-text);
+  line-height: 1.4;
+  cursor: default;
+  transition: color var(--transition-fast);
+}
+
+.title.completed {
+  color: var(--color-text-secondary);
+  text-decoration: line-through;
+}
+
+.editInput {
+  flex: 1;
+  padding: 2px var(--spacing-sm);
+  font-size: 0.875rem;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-sm);
+  outline: none;
+}
+
+.actions {
+  display: flex;
+  gap: var(--spacing-xs);
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.actionButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-sm);
+  color: var(--color-text-secondary);
+  position: relative;
+  transition: all var(--transition-fast);
+}
+
+.actionButton svg {
+  width: 14px;
+  height: 14px;
+}
+
+.actionButton:hover {
+  background-color: var(--color-surface);
+  color: var(--color-text);
+}
+
+.actionButton.active {
+  color: var(--color-accent);
+}
+
+.badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  min-width: 14px;
+  height: 14px;
+  padding: 0 4px;
+  font-size: 0.625rem;
+  font-weight: 600;
+  color: white;
+  background-color: var(--color-accent);
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.deleteButton:hover {
+  background-color: rgba(230, 57, 70, 0.1);
+  color: var(--color-accent);
+}
+
+[data-theme="dark"] .deleteButton:hover {
+  background-color: rgba(255, 107, 107, 0.1);
+}
+
+.reportsWrapper {
+  margin-left: 26px;
+  margin-top: var(--spacing-xs);
+  overflow: hidden;
+}
+
+/* Touch devices - always show actions */
+@media (hover: none) {
+  .actions {
+    opacity: 1;
+  }
+}
