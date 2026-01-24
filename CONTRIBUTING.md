@@ -2,12 +2,14 @@
 
 ## Setup
 
-```bash
-git clone https://github.com/lovro-git/KanbanBoard.git
-cd KanbanBoard
-npm install
-npm run dev
-```
+1. Fork the repository
+2. Clone your fork:
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/KanbanBoard.git
+   cd KanbanBoard
+   npm install
+   npm run dev
+   ```
 
 ## Scripts
 
