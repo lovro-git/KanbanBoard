@@ -24,10 +24,10 @@ npm run dev
 
 ## Pull Requests
 
-1. Create a feature branch
+1. Create a branch: `git checkout -b feature/your-feature`
 2. Make changes
 3. Ensure `npm run build` passes
-4. Submit PR with clear description
+4. Push and open a PR
 
 ## Reporting Issues
 
