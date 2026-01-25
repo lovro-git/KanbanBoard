@@ -39,10 +39,10 @@ git clone https://github.com/lovro-git/KanbanBoard.git
 cd KanbanBoard
 
 # Install dependencies
-npm install
+bun install
 
 # Start development server
-npm run dev
+bun run dev
 ```
 
 Open http://localhost:5173 in your browser.
@@ -50,7 +50,7 @@ Open http://localhost:5173 in your browser.
 ## Build for Production
 
 ```bash
-npm run build
+bun run build
 ```
 
 The output will be in the `dist/` folder. You can serve it with any static file server or just open `index.html` directly.
